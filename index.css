@@ -1,5 +1,6 @@
 :root {
     font-family: Inter;
+    line-height: 1.5;
     --bg: white;
     --clr-black: #050505;
     --clr-lighter-black: #121212;
@@ -19,26 +20,26 @@
     src: url(material/Inter.ttf);
 }
 
-body {
-    width: 1200px;
-    margin: 0 auto;
-}
-
 main {
     max-width: 1000px;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
 }
 
 /* NAVIGATION */
 #navigation {
-    width: 1200px;
     height: 50px;
+    margin: 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: var(--bg);
+    border-bottom: 1px solid var(--clr-white);
+    font-size: 13.5px;
 }
 
 #logo { 
@@ -55,6 +56,14 @@ main {
     gap: 20px;
     align-items: center;
 }
+
+#barky1 {
+    background-color: var(--clr-black);
+    border-radius: 3px;
+    color: var(--clr-white);
+    padding: 3px 5px;
+    text-decoration: none;
+}
 /* NAVIGATION END */
 
 h1 {
@@ -70,6 +79,14 @@ h1 {
 
 #home-page-image {
     height: auto;
+}
+
+.barky2 {
+    background-color: var(--clr-black);
+    border-radius: 3px;
+    color: var(--clr-white);
+    padding: 5px 5px;
+    text-decoration: none;
 }
 
 /* LOGOTYPES */
@@ -97,33 +114,44 @@ h1 {
 /* INFO-BOXES */
 .image {
     width: 1000px;
-    box-shadow: var(--box-shadow-clr-2);
+    box-shadow: 0px 0px 20px 5px var(--box-shadow-clr-1);
+    border-radius: 10px;
 }
 
 .quote {
     text-align: center;
+    color: var(--clr-light-gray);
 }
 
-p {
+.info-box {
+    padding: 50px 0;
+}
+
+.info-box p {
     line-height: 1.5;
     color: var(--clr-light-gray);
 }
 
 .profile {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 12px;
 }
 
 #face1 {
     background-image: url(material/face-01.png);
     height: 35px;
-    background-size: contain;
+    width: 35px;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 #face2 {
     background-image: url(material/face-02.png);
     height: 35px;
+    width: 35px;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -131,11 +159,129 @@ p {
 #face3 {
     background-image: url(material/face-03.png);
     height: 35px;
+    width: 35px;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
+#text-box {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid var(--clr-white);
+    font-size: 15px;
+}
+
+#text-box h2 {
+    margin: 0;
+}
+/* INFO-BOXES END */
+
+/* LIST */
+/* Lägga till span?? */
+#list-box {
+    background-color: var(--clr-white);
+    margin: 50px 0;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#list-box p {
+    color: var(--clr-light-gray);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dark-text {
+    color: var(--clr-dark-gray);
+}
+/* LIST END */
+
+/* GRID2 */
+#grid2-wrapper {
+    text-align: center;
+    border-top: 1px solid var(--clr-white);
+    padding: 50px 0;
+}
+
+#grid2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+#grid2 a {
+    color: var(--clr-black);
+}
+/* GRID2 END */
+
+/* STATISTICS */
+#statistics {
+    padding: 50px 0;
+}
+
+#statistics h1 {
+    text-align: center;
+}
+
+#statistics-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#badges {
+    height: 175px;
+}
+
+#grid3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    text-align: center;
+}
+
+#grid3 h1 {
+    font-size: 53px;
+    margin: 0;
+    color: var(--clr-lighter-gray);
+}
+
+#grid3 p {
+    color: var(--clr-light-gray);
+}
+/* STATISTICS END */
+
+#text-box2 {
+    text-align: center;
+    padding: 40px 0;
+}
+
 /* FOOTER */
 footer {
-    width: 1200px;
+    display: flex;
+    padding: 40px 0;
+    justify-content: space-around;
+    border-top: 1px solid var(--clr-white);
 }
+
+#footer-wrapper {
+    font-size: 12px;
+}
+
+#logo2 {
+    height: 33px;
+    padding: 10px 0;
+}
+
+#socials img {
+    height: 22px;
+    padding: 0 3px;
+}
+/* FOOTER END */
+
+/* MEDIA QUERIES */
