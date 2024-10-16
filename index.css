@@ -1,5 +1,22 @@
 :root {
+    font-family: Inter;
+    --bg: white;
+    --clr-black: #050505;
+    --clr-lighter-black: #121212;
+    --clr-dark-gray: #353535;
+    --clr-medium-gray: #666666;
+    --clr-lighter-gray: #7f7f7f;
+    --clr-light-gray: #999999;
+    --clr-gray: #e5e5e5;
+    --clr-white: #f4f4f4;
+    --clr-accent: #087fe7;
+    --box-shadow-clr-1: rgba(0, 0, 0, 0.1);
+    --box-shadow-clr-2: rgba(0, 0, 0, 0.2);
+}
 
+@font-face {
+    font-family: Inter;
+    src: url(material/Inter.ttf);
 }
 
 body {
@@ -13,13 +30,15 @@ main {
     margin-left: auto;
 }
 
+/* NAVIGATION */
 #navigation {
     width: 1200px;
     height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid rgb(222, 222, 222);
+    position: fixed;
+    background-color: var(--bg);
 }
 
 #logo { 
@@ -36,17 +55,87 @@ main {
     gap: 20px;
     align-items: center;
 }
+/* NAVIGATION END */
+
+h1 {
+    color: var(--clr-black);
+}
 
 #home-page {
     display: flex;
     height: 300px;
     justify-content: space-between;
+    padding: 10% 0 6%;
 }
 
 #home-page-image {
     height: auto;
 }
 
+/* LOGOTYPES */
+#logotypes-wrapper {
+    padding: 25px;
+    border-top: 1px solid var(--clr-white);
+    border-bottom: 1px solid var(--clr-white);
+}
+
+.logotypes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 30px;
+    padding: 20px;
+}
+
+.logotype {
+    height: 25px;
+}
+/* LOGOTYPES END */
+
+/* INFO-BOXES */
 .image {
     width: 1000px;
+    box-shadow: var(--box-shadow-clr-2);
+}
+
+.quote {
+    text-align: center;
+}
+
+p {
+    line-height: 1.5;
+    color: var(--clr-light-gray);
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+}
+
+#face1 {
+    background-image: url(material/face-01.png);
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#face2 {
+    background-image: url(material/face-02.png);
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#face3 {
+    background-image: url(material/face-03.png);
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* FOOTER */
+footer {
+    width: 1200px;
 }
