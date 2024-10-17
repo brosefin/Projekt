@@ -29,7 +29,7 @@ main {
 /* NAVIGATION */
 #navigation {
     height: 50px;
-    margin: 0 10px;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +39,6 @@ main {
     right: 0;
     background-color: var(--bg);
     border-bottom: 1px solid var(--clr-white);
-    font-size: 13.5px;
 }
 
 #logo { 
@@ -49,6 +48,7 @@ main {
 #nav-container1 {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 #nav-container2 {
@@ -63,6 +63,62 @@ main {
     color: var(--clr-white);
     padding: 3px 5px;
     text-decoration: none;
+}
+                    /* DROPDOWN MENY */
+
+.dropdown-content img {
+    height: 20px;
+}
+
+/* Dropdown button */
+.drop-button {
+    color: var(--clr-black);
+    padding: 6px 7px;
+}
+
+/* Dropdown content */
+.dropdown {
+    position: relative;
+  }
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    height: auto;
+    background-color: var(--bg);
+}
+
+.dropdown-box {
+    display: flex;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: var(--clr-white);
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .drop-button {
+    background-color: var(--clr-white);
+    border-radius: 3px;
+}
+
+.dropdown-box:hover {
+
 }
 /* NAVIGATION END */
 
