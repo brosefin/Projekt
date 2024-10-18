@@ -1,6 +1,5 @@
 :root {
     font-family: Inter;
-    line-height: 1.5;
     --bg: white;
     --clr-black: #050505;
     --clr-lighter-black: #121212;
@@ -26,8 +25,8 @@ main {
     margin-right: auto;
 }
 
-/* NAVIGATION */
-#navigation {
+/* HEADER */
+#header {
     height: 50px;
     padding: 0 15px;
     display: flex;
@@ -65,64 +64,75 @@ main {
     text-decoration: none;
 }
                     /* DROPDOWN MENY */
-
-.dropdown-content img {
-    height: 20px;
-}
-
-/* Dropdown button */
-.drop-button {
-    color: var(--clr-black);
-    padding: 6px 7px;
-}
-
-/* Dropdown content */
-.dropdown {
-    position: relative;
-  }
-
-/* Dropdown content */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    height: auto;
-    background-color: var(--bg);
-}
-
-.dropdown-box {
-    display: flex;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+.top-menu-container a {
     text-decoration: none;
-    display: block;
-    background-color: var(--clr-white);
+    color: var(--clr-black);
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content:hover {
-    background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .drop-button {
-    background-color: var(--clr-white);
+.sub-menu-items img {
+    height: 35px;
+    border: 1px solid var(--clr-gray);
     border-radius: 3px;
 }
 
-.dropdown-box:hover {
-
+.sub-menu-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 5px;
+    margin: 3px;
+    border-radius: 3px;
 }
-/* NAVIGATION END */
 
-h1 {
+.sub-menu-items p {
+    padding: 5px;
+    margin: 0;
+    font-size: 13.5;
+}
+
+.sub-menu-item-text {
+    font-size: 12px;
+    color: var(--clr-light-gray)
+}
+
+.top-menu-item {
+    display: flex;
+    position: relative;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.top-menu-item img {
+    height: 8px;
+    display: inline;
+    padding: 6px 4px;
+}
+
+.top-menu-item:hover {
+    background-color: var(--clr-white);
+    padding: 5px;
+}
+
+.sub-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: var(--bg);
+    box-shadow: 1px 4px 3px 4px var(--box-shadow-clr-1);
+    border-radius: 3px;
+}
+
+.sub-menu a:hover {
+    background-color: var(--clr-white);
+}
+
+.top-menu-container:hover .sub-menu {
+    display: flex;
+}
+                    /* DROPDOWN MENY END */
+/* HEADER END */
+
+#home-page h1 {
     color: var(--clr-black);
 }
 
@@ -340,4 +350,13 @@ footer {
 }
 /* FOOTER END */
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES SURFPLATTA */
+@media (max-width: 1080px) {
+    #nav-container2 {
+        display: none;
+    }
+
+    .top-menu-container {
+        display: none;
+    }
+}
