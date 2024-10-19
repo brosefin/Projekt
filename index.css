@@ -12,6 +12,22 @@
     --clr-accent: #087fe7;
     --box-shadow-clr-1: rgba(0, 0, 0, 0.1);
     --box-shadow-clr-2: rgba(0, 0, 0, 0.2);
+    --font-sz-53: 53px;
+    --font-sz-45: 45px;
+    --font-sz-36: 36px;
+    --font-sz-26: 26px;
+    --font-sz-24: 24px;
+    --font-sz-18: 18px;
+    --font-sz-15: 15px;
+    --font-sz-14: 14px;
+    --font-sz-13-5: 13.5px;
+    --font-sz-13: 13px;
+    --font-sz-12: 12px;
+    --font-wght-650: 650px;
+    --font-wght-550: 550px;
+    --font-wght-450: 450px;
+    --font-wght-400: 400px;
+    --font-wght-320: 320px;
 }
 
 @font-face {
@@ -36,6 +52,7 @@ main {
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     background-color: var(--bg);
     border-bottom: 1px solid var(--clr-white);
 }
@@ -54,6 +71,11 @@ main {
     display: flex;
     gap: 20px;
     align-items: center;
+}
+
+#nav-container2 img {
+    height: 15px;
+    display: none;
 }
 
 #barky1 {
@@ -129,22 +151,34 @@ main {
 .top-menu-container:hover .sub-menu {
     display: flex;
 }
+
+#sub-menu-item-text-link:hover {
+    color: var(--clr-accent);
+    text-decoration: dotted;
+}
                     /* DROPDOWN MENY END */
 /* HEADER END */
 
 #home-page h1 {
     color: var(--clr-black);
+    font-size: var(--font-sz-45);
 }
 
 #home-page {
     display: flex;
-    height: 300px;
+    height: 250px;
+    width: auto;
     justify-content: space-between;
-    padding: 10% 0 6%;
+    gap: 30px;
+    padding: 8% 5%;
+}
+
+#home-page p {
+    padding: 10px 0;
 }
 
 #home-page-image {
-    height: auto;
+    width: auto;
 }
 
 .barky2 {
@@ -163,17 +197,13 @@ main {
 }
 
 .logotypes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     gap: 15px;
-    height: 30px;
-    padding: 20px;
+    text-align: center;
 }
 
 .logotype {
     height: 25px;
+    padding: 10px;
 }
 /* LOGOTYPES END */
 
@@ -281,8 +311,12 @@ main {
     grid-template-rows: 1fr;
 }
 
-#grid2 a {
+#grid2-wrapper a {
     color: var(--clr-black);
+}
+
+#grid2 h2 {
+    margin: 0;
 }
 /* GRID2 END */
 
@@ -352,11 +386,48 @@ footer {
 
 /* MEDIA QUERIES SURFPLATTA */
 @media (max-width: 1080px) {
-    #nav-container2 {
-        display: none;
-    }
 
     .top-menu-container {
         display: none;
+    }
+
+    #home-page {
+        display: flex;
+        text-align: center;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    #home-page-image {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #nav-container2 a {
+        display: none;
+    }
+
+    #nav-container2 img {
+        display: flex;
+    }
+
+    #nav-container2 img:hover {
+        background-color: var(--clr-white);
+        border-radius: 3px;
+    }
+    
+    #grid2 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    #grid2-item {
+        padding: 20px 0;
+    }
+
+    #grid3 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 }
