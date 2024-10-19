@@ -1,5 +1,4 @@
 :root {
-    font-family: Inter;
     --bg: white;
     --clr-black: #050505;
     --clr-lighter-black: #121212;
@@ -12,6 +11,7 @@
     --clr-accent: #087fe7;
     --box-shadow-clr-1: rgba(0, 0, 0, 0.1);
     --box-shadow-clr-2: rgba(0, 0, 0, 0.2);
+    font-family: Inter;
     --font-sz-53: 53px;
     --font-sz-45: 45px;
     --font-sz-36: 36px;
@@ -23,11 +23,9 @@
     --font-sz-13-5: 13.5px;
     --font-sz-13: 13px;
     --font-sz-12: 12px;
-    --font-wght-650: 650px;
-    --font-wght-550: 550px;
-    --font-wght-450: 450px;
-    --font-wght-400: 400px;
-    --font-wght-320: 320px;
+    --line-height-3: 2;
+    --line-height-2: 1.5;
+    --line-height-1: 1.3;
 }
 
 @font-face {
@@ -55,6 +53,7 @@ main {
     bottom: 0;
     background-color: var(--bg);
     border-bottom: 1px solid var(--clr-white);
+    
 }
 
 #logo { 
@@ -71,7 +70,9 @@ main {
     display: flex;
     gap: 20px;
     align-items: center;
+    font-size: var(--font-sz-14);
 }
+
 
 #nav-container2 img {
     height: 15px;
@@ -89,6 +90,10 @@ main {
 .top-menu-container a {
     text-decoration: none;
     color: var(--clr-black);
+}
+
+.top-menu-item {
+    font-size: var(--font-sz-14);
 }
 
 .sub-menu-items img {
@@ -109,11 +114,11 @@ main {
 .sub-menu-items p {
     padding: 5px;
     margin: 0;
-    font-size: 13.5;
+    font-size: var(--font-sz-13-5);
 }
 
 .sub-menu-item-text {
-    font-size: 12px;
+    font-size: var(--font-sz-12);
     color: var(--clr-light-gray)
 }
 
@@ -162,6 +167,7 @@ main {
 #home-page h1 {
     color: var(--clr-black);
     font-size: var(--font-sz-45);
+    margin: 0;
 }
 
 #home-page {
@@ -174,7 +180,11 @@ main {
 }
 
 #home-page p {
-    padding: 10px 0;
+    padding: 10px 0 20px 0;
+    font-size: var(--font-sz-18);
+    color: var(--clr-lighter-gray);
+    line-height: var(--line-height-2);
+    margin: 0;
 }
 
 #home-page-image {
@@ -185,7 +195,7 @@ main {
     background-color: var(--clr-black);
     border-radius: 3px;
     color: var(--clr-white);
-    padding: 5px 5px;
+    padding: 7px 7px;
     text-decoration: none;
 }
 
@@ -209,7 +219,7 @@ main {
 
 /* INFO-BOXES */
 .image {
-    width: 1000px;
+    width: 100%;
     box-shadow: 0px 0px 20px 5px var(--box-shadow-clr-1);
     border-radius: 10px;
 }
@@ -221,6 +231,11 @@ main {
 
 .info-box {
     padding: 50px 0;
+}
+
+.info-box h2 {
+    margin: 0;
+    font-size: var(--font-sz-36);
 }
 
 .info-box p {
@@ -318,6 +333,14 @@ main {
 #grid2 h2 {
     margin: 0;
 }
+
+#grid2 a:hover {
+    color: var(--clr-accent);
+}
+
+.grid2-item {
+    border-right: 1px solid var(--clr-white);
+}
 /* GRID2 END */
 
 /* STATISTICS */
@@ -345,6 +368,10 @@ main {
     text-align: center;
 }
 
+.grid-3-cell {
+    border-right: 1px solid var(--clr-white);
+}
+
 #grid3 h1 {
     font-size: 53px;
     margin: 0;
@@ -365,12 +392,16 @@ main {
 footer {
     display: flex;
     padding: 40px 0;
-    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
     border-top: 1px solid var(--clr-white);
+    max-width: 1200px;
+    justify-content: space-between;
 }
 
-#footer-wrapper {
-    font-size: 12px;
+footer p {
+    font-size: var(--font-sz-12);
+    color: var(--clr-black);
 }
 
 #logo2 {
@@ -381,6 +412,19 @@ footer {
 #socials img {
     height: 22px;
     padding: 0 3px;
+}
+
+#grid4 {
+    display: flex;
+    gap: 70px;
+}
+
+.footer-container{
+    line-height: var(--line-height-3);
+}
+
+.footer-container a{
+    display: block;
 }
 /* FOOTER END */
 
@@ -429,5 +473,35 @@ footer {
     #grid3 {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
+    }
+
+    .grid-3-cell {
+        border-right: none;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        max-width: 1080px;
+    }
+
+    #grid4 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* MEDIA QUERIES MOBIL */
+
+@media (max-width: 600px) {
+
+    #barky1 {
+        display: none;
+    }
+
+    .info-box-text {
+        text-align: center;
     }
 }
