@@ -609,6 +609,8 @@ footer p {
 
     .quote {
         font-size: var(--font-sz-26);
+        width: auto;
+        padding: 0;
     }
 
     .info-box-text {
